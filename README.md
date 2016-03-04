@@ -1,16 +1,22 @@
-# Ruby Zabbix Wrapper
+# zenvelope [![Gem Version](https://badge.fury.io/rb/zenvelope.svg)](https://badge.fury.io/rb/zenvelope)
 I wanted a Zabbix API wrapper so that I could copy and paste code from
 Zabbix's API docs instead of learning whatever quirks library maintainers decided
 to build into their implementation.
 
-The result is Zenvelope. The `method` and `params` portions of the JSON
+The result is zenvelope. The `method` and `params` portions of the JSON
 requests are used in a transparent way that is meant to be readable and most
 importantly, usable without having to read any new docs.
 
 ## Installation
 
 ```
-gem install zenvelope
+gem install zenvelope --pre
+```
+
+or add to Gemfile:
+
+```
+gem 'zenvelope', '~> 0.1.0.pre'
 ```
 
 ## Example usage
@@ -74,4 +80,4 @@ z.host.create(
 ## TODO
 
 - testing
-- error handling
+- gracefully handling errors
