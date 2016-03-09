@@ -10,13 +10,13 @@ importantly, usable without having to read any new docs.
 ## Installation
 
 ```
-gem install zenvelope --pre
+gem install zenvelope
 ```
 
 or add to Gemfile:
 
 ```
-gem 'zenvelope', '~> 0.1.0.pre'
+gem 'zenvelope'
 ```
 
 ## Example usage
