@@ -5,7 +5,9 @@ require 'json'
 class Zenvelope
   JSON_RPC_VERSION = '2.0'
   RANDOM_ID_SEED = 100_000
-  VERSION = '0.1.0.pre'
+  VERSION = '0.2.0'
+
+  attr_reader :auth
 
   # Subclass that provides the "action", i.e. the "get" in "host.get"
   class ZenvelopeAction
@@ -25,7 +27,13 @@ class Zenvelope
   end
 
   def login(creds = { user: 'Admin', password: 'zabbix' })
-    @auth = query('user.login', creds)
+    results = query('user.login', creds)
+    # return the auth id if successful login, otherwise return false
+    @auth = if results.is_a?(String) && /[a-zA-Z0-9]{32}/.match(results)
+              results
+            else
+              false
+            end
   end
 
   def method_missing(method)
