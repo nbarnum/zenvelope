@@ -79,5 +79,4 @@ z.host.create(
 
 ## TODO
 
-- testing
 - gracefully handling errors
