@@ -5,12 +5,12 @@ require 'json'
 class Zenvelope
   JSON_RPC_VERSION = '2.0'
   RANDOM_ID_SEED = 100_000
-  VERSION = '0.2.0'
+  VERSION = '0.2.1'
 
   attr_reader :auth
 
   # Subclass that provides the "action", i.e. the "get" in "host.get"
-  class ZenvelopeAction
+  class Action
     def initialize(verb, parent)
       @verb = verb
       @parent = parent
@@ -37,7 +37,7 @@ class Zenvelope
   end
 
   def method_missing(method)
-    instance_variable_set('@' + method.to_s, ZenvelopeAction.new(method, self))
+    instance_variable_set('@' + method.to_s, Action.new(method, self))
     instance_variable_get('@' + method.to_s)
   end
 
