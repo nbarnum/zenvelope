@@ -1,4 +1,4 @@
-# zenvelope [![Gem Version](https://badge.fury.io/rb/zenvelope.svg)](https://badge.fury.io/rb/zenvelope)
+# zenvelope [![Gem Version](https://badge.fury.io/rb/zenvelope.svg)](https://badge.fury.io/rb/zenvelope) [![Build Status](https://travis-ci.org/nbarnum/zenvelope.svg?branch=master)](https://travis-ci.org/nbarnum/zenvelope)
 I wanted a Zabbix API wrapper so that I could copy and paste code from
 Zabbix's API docs instead of learning whatever quirks library maintainers decided
 to build into their implementation.
