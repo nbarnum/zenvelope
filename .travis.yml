@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+- 1.9.3
+- 2.0.0
+- 2.1
+- 2.2
+script: bundle exec rspec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: vDW6+nKE30Mh9jM7hIKhHHlOdnaWkLs/qbUgrbxnM+u/ua9GipuzLnGJeZhd3fUR8j/KDey4Eld3YGyHX2CTvo1Va/RxyMGZVTOuy3zjmEqSm6hhzTMQmFUcMUPy5n+P6OlV58UaYIkZGthTsmMOvdL9t64NORFb44bPWzT0i4/W5mbP9zKehFSSwYQRAUO37E82EoehWXRyIndZ8Y7pe2VurYvtmhO58/zAMXczYbXbHhImTMDCFwS0PeaoPDqFqN+BsYhmSEo+rFPKIC1T8ew0OHQdpZWnky8VzliwNUxYGJ//4zNykXSJSVF14CHucYdLLtuaNWebPjDB7pCn+c6+LYvY4QNmsgYH/0DQh6Jhm5vJSn9fywZUdnFu1MBQCC9bDUO7wFoBDQPtD4nuRjVwPG209iwCucBlgqItkQhQduyWyXOdBJmssklqkEjw0vodECNzofmcy7xZzs8khn2pgFyJra7VtjGhimvFBD31n3dvQKXcPznZ8eyM3THYSwwwMnEaGemsjddBzkkoHHZ9dnOoOB41sfGmdGdJjUXXC5DEoo6rH3GjpGVqpc+7UAeNEgIXiOWOrtMGySjBBK2ljEl49L0x1FIbY+aYfHBxhiIjENgG+WbIWn7sURB7j097/kgH/57IsL5YC64qP+4JTlQXexwFFdcGhAdwvuI=
+  gem: zenvelope
+  on:
+    tags: true
+    repo: nbarnum/zenvelope
