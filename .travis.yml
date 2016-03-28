@@ -13,3 +13,4 @@ deploy:
   on:
     tags: true
     repo: nbarnum/zenvelope
+    rvm: 2.2
